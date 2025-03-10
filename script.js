@@ -1,0 +1,617 @@
+// // 8 блок
+
+// // Создаем элемент footer
+// const footer = document.createElement("footer");
+
+// // Создаем контейнер footer
+// const footerContainer = document.createElement("div");
+// footerContainer.className = "footer-container";
+
+// // Создаем блок логотипа
+// const footerLogo = document.createElement("div");
+// footerLogo.className = "footer-logo";
+
+// const logoImg = document.createElement("img");
+// logoImg.src = "./picture/logo.jpg"; // изменено
+// logoImg.alt = "Логотип ресторана";
+// footerLogo.appendChild(logoImg);
+
+// // Создаем блок контактов
+// const footerContact = document.createElement("div");
+// footerContact.className = "footer-contact";
+
+// const contactTitle = document.createElement("h4");
+// contactTitle.textContent = "Контакты";
+// footerContact.appendChild(contactTitle);
+
+// const contactAddress = document.createElement("p");
+// contactAddress.textContent = "Адрес: ул. Победная, д.9";
+// footerContact.appendChild(contactAddress);
+
+// const contactPhone = document.createElement("p");
+// contactPhone.textContent = "Телефон: +7(123)456-78-90";
+// footerContact.appendChild(contactPhone);
+
+// const contactHours = document.createElement("p");
+// contactHours.textContent = "Режим работы: с 10:00 до 23:00";
+// footerContact.appendChild(contactHours);
+
+// // Создаем блок навигации
+// const footerNav = document.createElement("div");
+// footerNav.className = "footer-nav";
+
+// const navTitle = document.createElement("h4");
+// navTitle.textContent = "Навигация";
+// footerNav.appendChild(navTitle);
+
+// const navList = document.createElement("ul");
+
+// const navItems = [
+//   { href: "./menu", text: "Меню" }, // изменено
+//   { href: "./events", text: "Мероприятия" }, // изменено
+//   { href: "./about", text: "О нас" }, // изменено
+//   { href: "./contacts", text: "Контакты" }, // изменено
+// ];
+
+// navItems.forEach((item) => {
+//   const navListItem = document.createElement("li");
+//   const navLink = document.createElement("a");
+//   navLink.href = item.href;
+//   navLink.textContent = item.text;
+//   navListItem.appendChild(navLink);
+//   navList.appendChild(navListItem);
+// });
+
+// footerNav.appendChild(navList);
+
+// // Создаем блок социальных сетей
+// const footerSocial = document.createElement("div");
+// footerSocial.className = "footer-social";
+
+// const socialTitle = document.createElement("h4");
+// socialTitle.textContent = "Мы в соцсетях";
+// footerSocial.appendChild(socialTitle);
+
+// const socialLinks = [
+//   { href: "https://vk.com/yourpage", text: "VK" },
+//   { href: "https://www.instagram.com/yourpage", text: "Instagram" },
+//   { href: "https://www.facebook.com/yourpage", text: "Facebook" },
+// ];
+
+// socialLinks.forEach((link) => {
+//   const socialLink = document.createElement("a");
+//   socialLink.href = link.href;
+//   socialLink.target = "_blank";
+//   socialLink.textContent = link.text;
+//   footerSocial.appendChild(socialLink);
+// });
+
+// // Создаем блок программы лояльности
+// const footerLoyalty = document.createElement("div");
+// footerLoyalty.className = "footer-loyalty";
+
+// const loyaltyTitle = document.createElement("h4");
+// loyaltyTitle.textContent = "Программа лояльности";
+// footerLoyalty.appendChild(loyaltyTitle);
+
+// const loyaltyDescription = document.createElement("p");
+// loyaltyDescription.innerHTML = `Станьте участником нашей программы и получайте скидки и бонусы.
+// <a href="./loyalty">Узнать больше</a>`; // изменено
+// footerLoyalty.appendChild(loyaltyDescription);
+
+// // Добавляем все блоки в контейнер footer
+// footerContainer.appendChild(footerLogo);
+// footerContainer.appendChild(footerContact);
+
+const app = document.getElementById("app");
+
+const backgroundBlock = document.createElement("div");
+backgroundBlock.className = "background-block";
+
+const navbar = document.createElement("div");
+navbar.className = "navbar";
+
+const navbarBrand = document.createElement("a");
+navbarBrand.className = "navbar-brand";
+navbarBrand.href = "#";
+
+const animatedButton = document.createElement("img");
+animatedButton.src = "./animation/Animation - 1741390234585.gif"; // изменено
+animatedButton.alt = "button";
+animatedButton.className = "animated-button";
+
+navbarBrand.appendChild(animatedButton);
+navbar.appendChild(navbarBrand);
+
+const content = document.createElement("div");
+content.className = "content";
+
+const contentTitle = document.createElement("div");
+contentTitle.className = "content-title";
+
+const titleH1 = document.createElement("h1");
+titleH1.textContent = "Continental";
+
+const titleH2 = document.createElement("h2");
+titleH2.textContent = "Palate";
+
+contentTitle.appendChild(titleH1);
+contentTitle.appendChild(titleH2);
+content.appendChild(contentTitle);
+
+const paragraph = document.createElement("p");
+paragraph.textContent =
+  "Continental Palate - это сеть заведений сферы гостеприимства, которая дарит вам незабываемые эмоции с 2017 года и вдохновляет вас возвращаться к нам снова и снова.";
+content.appendChild(paragraph);
+
+const navbarButton = document.createElement("div");
+navbarButton.className = "navbar-button";
+
+const buttonReserv = document.createElement("button");
+buttonReserv.className = "button-reserv";
+buttonReserv.textContent = "Забронировать";
+
+const buttonCall = document.createElement("button");
+buttonCall.className = "button-call";
+buttonCall.textContent = "Позвонить";
+
+navbarButton.appendChild(buttonReserv);
+navbarButton.appendChild(buttonCall);
+content.appendChild(navbarButton);
+
+backgroundBlock.appendChild(navbar);
+backgroundBlock.appendChild(content);
+app.appendChild(backgroundBlock);
+
+// анимации
+
+const animationBlock = document.createElement("div");
+animationBlock.className = "animation-block";
+
+const images = [
+  {
+    src: "./animation/Animation -крестик.gif", // изменено
+    alt: "animated rotate",
+    className: "animated-button-two",
+  },
+  {
+    src: "./animation/Animation -крестик.gif", // изменено
+    alt: "animated rotate",
+    className: "animated-button-three",
+  },
+  {
+    src: "./animation/Vector.svg.png", // изменено
+    alt: "animated rotate",
+    className: "animated-button-four",
+  },
+  {
+    src: "./animation/Vector.svg.png", // изменено
+    alt: "animated rotate",
+    className: "animated-button-five",
+  },
+];
+
+images.forEach((imageData) => {
+  const img = document.createElement("img");
+  img.src = imageData.src;
+  img.alt = imageData.alt;
+  img.className = imageData.className;
+  animationBlock.appendChild(img);
+});
+
+document.body.appendChild(animationBlock);
+
+// 2 блок
+const main = document.createElement("div");
+main.className = "main";
+
+const contentBlock2 = document.createElement("div");
+contentBlock2.className = "content-block";
+
+contentBlock2.innerHTML = `
+  <h1>Философия бренда - это эмоции наших гостей.</h1>
+  <p>Мы верим, что каждый прием пищи — это не просто обед или ужин, а особое событие, которое должно быть наполнено эмоциями, наслаждением и яркими впечатлениями. Мы стремимся к тому, чтобы каждый наш гость чувствовал себя уютно, как дома, но с уровнем сервиса, который превышает все ожидания.</p>
+`;
+
+// Кнопка "История О нас"
+const button = document.createElement("button");
+button.className = "button-history";
+button.textContent = "История О нас";
+contentBlock2.appendChild(button);
+
+// Слайдер изображений
+const imageSlider = document.createElement("div");
+imageSlider.className = "image-slider";
+const img = document.createElement("img");
+img.id = "slidingImage";
+img.src = "./picture/restaurant-1.jpg"; // изменено
+img.alt = "Image Slider";
+imageSlider.appendChild(img);
+
+// Добавление второго блока контента в основной блок
+main.appendChild(contentBlock2);
+main.appendChild(imageSlider);
+
+// Добавляем main в app
+app.appendChild(main);
+const imagePaths = [
+  "./picture/restaurant-1.jpg", // изменено
+  "./picture/restaurant-2.jpg", // изменено
+  "./picture/restaurant-3.jpg", // изменено
+  "./picture/restaurant-4.jpg", // изменено
+];
+
+let currentSlideshowIndex = 0;
+const imageElement = document.getElementById("slidingImage");
+const carouselImages = document.querySelectorAll(".carousel-inner img");
+let currentCarouselIndex = 0; // Переменную нужно определить здесь
+
+// Функция смены изображения в слайдере
+const changeSlideshowImage = () => {
+  imageElement.src = imagePaths[currentSlideshowIndex];
+  currentSlideshowIndex = (currentSlideshowIndex + 1) % imagePaths.length;
+};
+
+// Устанавливаем интервал смены изображений
+setInterval(changeSlideshowImage, 2000);
+
+// 3 блок
+const blockRoom = document.createElement("div");
+blockRoom.className = "block-room";
+
+const imageRoom = document.createElement("div");
+imageRoom.className = "image-room";
+
+const imgRoom = document.createElement("img"); // Исправлено
+imgRoom.id = "slidingImageRoom";
+imgRoom.src = "./picture/restaurant-5.jpg"; // пут к изображению
+imgRoom.alt = "Image Slider";
+
+imageRoom.appendChild(imgRoom);
+
+const contentBlock3 = document.createElement("div");
+contentBlock3.className = "content-block";
+
+const titleH1_3 = document.createElement("h1");
+titleH1_3.textContent = "Бронирование VIP-комнат";
+
+const paragraph1 = document.createElement("p");
+paragraph1.textContent =
+  "В нашем ресторане есть возможность бронирования VIP-комнат для частных встреч, бизнес-ланчей или семейных ужинов. Эти комнаты оформлены с максимальным комфортом и уединением, что позволяет нашим клиентам насладиться личным моментом в обстановке высокой кухни.";
+
+const paragraph2 = document.createElement("p");
+paragraph2.textContent =
+  "Для гостей VIP-залов мы предлагаем эксклюзивное меню и персонализированное обслуживание, что создает уникальный опыт.";
+
+const blockRoomButton = document.createElement("div");
+blockRoomButton.className = "block-room-button";
+
+const buttonReservRoom = document.createElement("button");
+buttonReservRoom.className = "button-reserv";
+buttonReservRoom.textContent = "Забронировать";
+
+contentBlock3.append(titleH1_3, paragraph1, paragraph2, blockRoomButton);
+blockRoomButton.appendChild(buttonReservRoom);
+
+blockRoom.append(imageRoom, contentBlock3);
+
+// Добавляем blockRoom в app
+app.appendChild(blockRoom);
+
+// 4 блок
+
+document.addEventListener("DOMContentLoaded", () => {
+  const carouselInner = document.querySelector(".carousel-inner");
+  const prevButton = document.querySelector(".carousel-control.prev");
+  const nextButton = document.querySelector(".carousel-control.next");
+  const images = carouselInner.querySelectorAll("img");
+  let currentIndex = 0;
+
+  const updateCarousel = () => {
+    images.forEach((img, index) => {
+      img.classList.toggle("active", index === currentIndex);
+    });
+  };
+
+  prevButton.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateCarousel();
+  });
+
+  nextButton.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateCarousel();
+  });
+
+  // Автоматическая смена изображений каждые 3 секунды
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateCarousel();
+  }, 3000);
+
+  updateCarousel();
+});
+
+// 5 блок
+const eventBlock = document.createElement("div");
+eventBlock.className = "event-block";
+
+const eventTitle = document.createElement("div");
+eventTitle.className = "event-title";
+
+const eventTitleH1 = document.createElement("h1");
+eventTitleH1.textContent = "Мероприятия в ресторане";
+eventTitle.appendChild(eventTitleH1);
+
+const events = [
+  {
+    title: "Гастрономические вечера",
+    description:
+      "Мы организуем специальные вечера, на которых шеф-повар предлагает изысканные кулинарные сочетания, основанные на сезоне и только что собранных ингредиентах.",
+  },
+  {
+    title: "Кулинарные мастер-классы",
+    description:
+      "Наши повара делятся секретами и техниками, позволяя гостям погрузиться в мир кулинарии и научиться готовить как профессионалы.",
+  },
+  {
+    title: "Музыкальные вечера",
+    description:
+      "Живая музыка и атмосфера изысканности обеспечивают неповторимый вечер для всех желающих насладиться шикарной кухней и атмосферой.",
+  },
+];
+
+events.forEach((event) => {
+  const eventItem = document.createElement("div");
+  eventItem.className = "event-item";
+
+  const eventH2 = document.createElement("h2");
+  eventH2.textContent = event.title;
+  eventItem.appendChild(eventH2);
+
+  const eventP = document.createElement("p");
+  eventP.textContent = event.description;
+  eventItem.appendChild(eventP);
+
+  eventTitle.appendChild(eventItem);
+});
+
+eventBlock.appendChild(eventTitle);
+
+const blockEventButton = document.createElement("div");
+blockEventButton.className = "block-event-button";
+
+const eventVideo = document.createElement("video");
+eventVideo.id = "event-video";
+eventVideo.autoplay = true;
+eventVideo.muted = true;
+eventVideo.loop = true;
+
+const videoSource = document.createElement("source");
+videoSource.src = "./video/857151-hd_1920_746_30fps.mp4";
+videoSource.type = "video/mp4";
+eventVideo.appendChild(videoSource);
+
+const buttonReservEvent = document.createElement("button");
+buttonReservEvent.className = "button-reserv-event";
+buttonReservEvent.textContent = "Оставить заявку";
+
+blockEventButton.appendChild(eventVideo);
+blockEventButton.appendChild(buttonReservEvent);
+
+eventBlock.appendChild(blockEventButton);
+
+document.body.appendChild(eventBlock);
+
+// 6 блок
+
+const menuBlock = document.createElement("div");
+menuBlock.className = "menu-block";
+
+const contentMenu = document.createElement("div");
+contentMenu.className = "content-menu";
+
+const menuTitle = document.createElement("h1");
+menuTitle.textContent = "Классические рецепты с инновационным подходом.";
+contentMenu.appendChild(menuTitle);
+
+const menuDescription = document.createElement("p");
+menuDescription.textContent =
+  "Мы разработали уникальное и разнообразное меню, сочетающее традиционные блюда с элементами современной кухни. Наша цель – создать атмосферу уюта и домашнего тепла, даря гостям неповторимые вкусовые впечатления.";
+contentMenu.appendChild(menuDescription);
+
+const menuButtonDiv = document.createElement("div");
+menuButtonDiv.className = "menu-button";
+
+const menuButton = document.createElement("button");
+menuButton.className = "button-menu";
+menuButton.textContent = "Наше меню";
+menuButtonDiv.appendChild(menuButton);
+
+contentMenu.appendChild(menuButtonDiv);
+menuBlock.appendChild(contentMenu);
+
+const imageMenu = document.createElement("div");
+imageMenu.className = "image-menu";
+
+const imageMenuImg = document.createElement("img");
+imageMenuImg.src = "./picture/meze.png";
+imageMenuImg.alt = "Image Menu";
+imageMenu.appendChild(imageMenuImg);
+
+const imageMenuTwo = document.createElement("div");
+imageMenuTwo.className = "image-menu-two";
+
+const imageMenuTwoImg = document.createElement("img");
+imageMenuTwoImg.src = "./picture/menu1.png";
+imageMenuTwoImg.alt = "Image Menu";
+imageMenuTwo.appendChild(imageMenuTwoImg);
+
+menuBlock.appendChild(imageMenu);
+menuBlock.appendChild(imageMenuTwo);
+document.body.appendChild(menuBlock);
+
+// 7 блок
+
+const gridContainer = document.createElement("div");
+gridContainer.className = "grid-container";
+
+const gridItems = [
+  {
+    src: "./picture/restaurant-23.jpg",
+    alt: "Restaurant Image 6",
+    className: "grid-item grid-item-large",
+  },
+  {
+    src: "./picture/restaurant-16.jpg",
+    alt: "Restaurant Image 7",
+    className: "grid-item",
+  },
+  {
+    src: "./picture/restaurant-17.png",
+    alt: "Restaurant Image 8",
+    className: "grid-item grid-item-large",
+  },
+  {
+    src: "./picture/restaurant-18.png",
+    alt: "Restaurant Image 9",
+    className: "grid-item",
+  },
+  {
+    src: "./picture/restaurant-19.png",
+    alt: "Restaurant Image 10",
+    className: "grid-item",
+  },
+  {
+    src: "./picture/restaurant-22.jpg",
+    alt: "Restaurant Image 11",
+    className: "grid-item",
+  },
+];
+
+gridItems.forEach((item) => {
+  const gridItem = document.createElement("div");
+  gridItem.className = item.className;
+
+  const img = document.createElement("img");
+  img.src = item.src;
+  img.alt = item.alt;
+
+  gridItem.appendChild(img);
+  gridContainer.appendChild(gridItem);
+});
+
+const gridButtonDiv = document.createElement("div");
+gridButtonDiv.className = "grid-button";
+
+const gridButton = document.createElement("button");
+gridButton.className = "button-reserv-grid";
+gridButton.textContent = "Забронировать столик";
+
+gridButtonDiv.appendChild(gridButton);
+
+document.body.appendChild(gridContainer);
+document.body.appendChild(gridButtonDiv);
+
+// 8 блок
+
+const footer = document.createElement("footer");
+
+const footerContainer = document.createElement("div");
+footerContainer.className = "footer-container";
+
+const footerLogo = document.createElement("div");
+footerLogo.className = "footer-logo";
+
+const logoImg = document.createElement("img");
+logoImg.src = "./picture/logo.jpg";
+logoImg.alt = "Логотип ресторана";
+footerLogo.appendChild(logoImg);
+
+const footerContact = document.createElement("div");
+footerContact.className = "footer-contact";
+
+const contactTitle = document.createElement("h4");
+contactTitle.textContent = "Контакты";
+footerContact.appendChild(contactTitle);
+
+const contactAddress = document.createElement("p");
+contactAddress.textContent = "Адрес: ул. Победная, д.9";
+footerContact.appendChild(contactAddress);
+
+const contactPhone = document.createElement("p");
+contactPhone.textContent = "Телефон: +7(123)456-78-90";
+footerContact.appendChild(contactPhone);
+
+const contactHours = document.createElement("p");
+contactHours.textContent = "Режим работы: с 10:00 до 23:00";
+footerContact.appendChild(contactHours);
+
+const footerNav = document.createElement("div");
+footerNav.className = "footer-nav";
+
+const navTitle = document.createElement("h4");
+navTitle.textContent = "Навигация";
+footerNav.appendChild(navTitle);
+
+const navList = document.createElement("ul");
+
+const navItems = [
+  { href: "./menu", text: "Меню" },
+  { href: "./events", text: "Мероприятия" },
+  { href: "./about", text: "О нас" },
+  { href: "./contacts", text: "Контакты" },
+];
+
+navItems.forEach((item) => {
+  const navListItem = document.createElement("li");
+  const navLink = document.createElement("a");
+  navLink.href = item.href;
+  navLink.textContent = item.text;
+  navListItem.appendChild(navLink);
+  navList.appendChild(navListItem);
+});
+
+footerNav.appendChild(navList);
+
+const footerSocial = document.createElement("div");
+footerSocial.className = "footer-social";
+
+const socialTitle = document.createElement("h4");
+socialTitle.textContent = "Мы в соцсетях";
+footerSocial.appendChild(socialTitle);
+
+const socialLinks = [
+  { href: "https://vk.com/yourpage", text: "VK" },
+  { href: "https://www.instagram.com/yourpage", text: "Instagram" },
+  { href: "https://www.facebook.com/yourpage", text: "Facebook" },
+];
+
+socialLinks.forEach((link) => {
+  const socialLink = document.createElement("a");
+  socialLink.href = link.href;
+  socialLink.target = "_blank";
+  socialLink.textContent = link.text;
+  footerSocial.appendChild(socialLink);
+});
+
+const footerLoyalty = document.createElement("div");
+footerLoyalty.className = "footer-loyalty";
+
+const loyaltyTitle = document.createElement("h4");
+loyaltyTitle.textContent = "Программа лояльности";
+footerLoyalty.appendChild(loyaltyTitle);
+
+const loyaltyDescription = document.createElement("p");
+loyaltyDescription.innerHTML =
+  'Станьте участником нашей программы и получайте скидки и бонусы. <a href="./loyalty">Узнать больше</a>';
+footerLoyalty.appendChild(loyaltyDescription);
+
+footerContainer.appendChild(footerLogo);
+footerContainer.appendChild(footerContact);
+footerContainer.appendChild(footerNav);
+footerContainer.appendChild(footerSocial);
+footerContainer.appendChild(footerLoyalty);
+footer.appendChild(footerContainer);
+
+document.body.appendChild(footer);
