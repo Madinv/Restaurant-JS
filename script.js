@@ -4,7 +4,7 @@ const backgroundBlock = document.createElement("div");
 backgroundBlock.className = "background-block";
 
 const navbar = document.createElement("div");
-navbar.className = "navbar";
+navbar.className = "navbar-main";
 
 const navbarBrand = document.createElement("a");
 navbarBrand.className = "navbar-brand";
@@ -19,7 +19,7 @@ navbarBrand.appendChild(animatedButton);
 navbar.appendChild(navbarBrand);
 
 const content = document.createElement("div");
-content.className = "content";
+content.className = "content-main";
 
 const contentTitle = document.createElement("div");
 contentTitle.className = "content-title";
@@ -45,10 +45,16 @@ navbarButton.className = "navbar-button";
 const buttonReserv = document.createElement("button");
 buttonReserv.className = "button-reserv";
 buttonReserv.textContent = "Забронировать";
+buttonReserv.addEventListener("click", () => {
+  window.location.href = "./reservation.html"; // Укажите нужный путь
+});
 
 const buttonCall = document.createElement("button");
 buttonCall.className = "button-call";
 buttonCall.textContent = "Позвонить";
+buttonCall.addEventListener("click", () => {
+  window.location.href = "./reservation.html"; // Укажите нужный путь
+});
 
 navbarButton.appendChild(buttonReserv);
 navbarButton.appendChild(buttonCall);
@@ -111,6 +117,9 @@ contentBlock2.innerHTML = `
 const button = document.createElement("button");
 button.className = "button-history";
 button.textContent = "История О нас";
+button.addEventListener("click", () => {
+  window.location.href = "./about.html"; // Укажите нужный путь
+});
 contentBlock2.appendChild(button);
 
 const imageSlider = document.createElement("div");
@@ -179,6 +188,9 @@ blockRoomButton.className = "block-room-button";
 const buttonReservRoom = document.createElement("button");
 buttonReservRoom.className = "button-reserv";
 buttonReservRoom.textContent = "Забронировать";
+buttonReservRoom.addEventListener("click", () => {
+  window.location.href = "./reservation.html"; // Укажите нужный путь
+});
 
 contentBlock3.append(titleH1_3, paragraph1, paragraph2, blockRoomButton);
 blockRoomButton.appendChild(buttonReservRoom);
@@ -284,6 +296,9 @@ eventVideo.appendChild(videoSource);
 const buttonReservEvent = document.createElement("button");
 buttonReservEvent.className = "button-reserv-event";
 buttonReservEvent.textContent = "Оставить заявку";
+buttonReservEvent.addEventListener("click", () => {
+  window.location.href = "./reservation.html"; // Укажите нужный путь
+});
 
 blockEventButton.appendChild(eventVideo);
 blockEventButton.appendChild(buttonReservEvent);
@@ -315,6 +330,9 @@ menuButtonDiv.className = "menu-button";
 const menuButton = document.createElement("button");
 menuButton.className = "button-menu";
 menuButton.textContent = "Наше меню";
+menuButton.addEventListener("click", () => {
+  window.location.href = "./reservation.html"; // Укажите нужный путь
+});
 menuButtonDiv.appendChild(menuButton);
 
 contentMenu.appendChild(menuButtonDiv);
@@ -396,6 +414,9 @@ gridButtonDiv.className = "grid-button";
 const gridButton = document.createElement("button");
 gridButton.className = "button-reserv-grid";
 gridButton.textContent = "Забронировать столик";
+gridButton.addEventListener("click", () => {
+  window.location.href = "./reservation.html"; // Укажите нужный путь
+});
 
 gridButtonDiv.appendChild(gridButton);
 
@@ -404,7 +425,8 @@ document.body.appendChild(gridButtonDiv);
 
 // 8 блок
 
-const footer = document.createElement("footer");
+const footerMain = document.createElement("footer");
+footerMain.className = "footer-main";
 
 const footerContainer = document.createElement("div");
 footerContainer.className = "footer-container";
@@ -429,7 +451,7 @@ contactAddress.textContent = "Адрес: ул. Победная, д.9";
 footerContact.appendChild(contactAddress);
 
 const contactPhone = document.createElement("p");
-contactPhone.textContent = "Телефон: +7(123)456-78-90";
+contactPhone.textContent = "Телефон: +7(495)159-61-28";
 footerContact.appendChild(contactPhone);
 
 const contactHours = document.createElement("p");
@@ -501,6 +523,6 @@ footerContainer.appendChild(footerContact);
 footerContainer.appendChild(footerNav);
 footerContainer.appendChild(footerSocial);
 footerContainer.appendChild(footerLoyalty);
-footer.appendChild(footerContainer);
+footerMain.appendChild(footerContainer);
 
-document.body.appendChild(footer);
+document.body.appendChild(footerMain);
