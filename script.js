@@ -165,8 +165,13 @@ const imgRoom = document.createElement("img");
 imgRoom.id = "slidingImageRoom";
 imgRoom.src = "./picture/restaurant-5.jpg";
 imgRoom.alt = "Image Slider";
-
 imageRoom.appendChild(imgRoom);
+const imgRoomTwo = document.createElement("img");
+imgRoomTwo.id = "slidingImageRoomTwo";
+imgRoomTwo.src = "./picture/restaurant-22.jpg";
+imgRoomTwo.alt = "Image Slider";
+
+imageRoom.appendChild(imgRoomTwo);
 
 const contentBlock3 = document.createElement("div");
 contentBlock3.className = "content-block";
@@ -307,6 +312,23 @@ eventBlock.appendChild(blockEventButton);
 
 document.body.appendChild(eventBlock);
 
+// Бегущая строка
+
+// const infoBlock = document.createElement("div");
+// infoBlock.className = "info-block";
+
+// const infoBlockText = document.createElement("div");
+// infoBlockText.className = "info-block-text";
+
+// const infoText = document.createElement("p");
+// infoText.textContent =
+//   "Каждое блюдо — это не просто еда, это произведение искусства, созданное для вдохновения.";
+
+// infoBlockText.appendChild(infoText);
+// infoBlock.appendChild(infoBlockText);
+
+// document.body.appendChild(infoBlock);
+
 // 6 блок
 
 const menuBlock = document.createElement("div");
@@ -316,7 +338,7 @@ const contentMenu = document.createElement("div");
 contentMenu.className = "content-menu";
 
 const menuTitle = document.createElement("h1");
-menuTitle.textContent = "Классические рецепты с инновационным подходом.";
+menuTitle.textContent = "Рецепты с инновационным подходом";
 contentMenu.appendChild(menuTitle);
 
 const menuDescription = document.createElement("p");
