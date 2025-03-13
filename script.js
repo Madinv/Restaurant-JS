@@ -51,7 +51,7 @@ buttonReserv.addEventListener("click", () => {
 
 const buttonCall = document.createElement("button");
 buttonCall.className = "button-call";
-buttonCall.textContent = "Позвонить";
+buttonCall.textContent = "Сделать заказ";
 buttonCall.addEventListener("click", () => {
   window.location.href = "./reservation.html"; // Укажите нужный путь
 });
